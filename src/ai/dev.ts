@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/interactive-legal-faq-chatbot-flow.ts';
+// No active flows at the moment.

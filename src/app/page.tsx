@@ -6,7 +6,6 @@ import { Compliance } from '@/components/legal/Compliance';
 import { Attorneys } from '@/components/legal/Attorneys';
 import { Quote } from '@/components/legal/Quote';
 import { ContactForm } from '@/components/legal/ContactForm';
-import { Chatbot } from '@/components/legal/Chatbot';
 import { Footer } from '@/components/legal/Footer';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <Compliance />
       <Attorneys />
       <Quote />
-      <Chatbot />
       <ContactForm />
       <Footer />
     </main>

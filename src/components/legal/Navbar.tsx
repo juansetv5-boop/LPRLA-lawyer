@@ -16,7 +16,7 @@ export const Navbar = () => {
           <a className="hover:text-primary transition-colors" href="#defensa">Especialidades</a>
           <a className="hover:text-primary transition-colors" href="#compliance">Cumplimiento</a>
           <a className="hover:text-primary transition-colors" href="#estrategia">Táctica</a>
-          <a className="hover:text-primary transition-colors" href="#chatbot">FAQ AI</a>
+          <a className="hover:text-primary transition-colors" href="#contacto">Contacto</a>
         </nav>
 
         <Button asChild className="gold-foil-gradient text-background rounded-none border-none px-8 py-6 text-[10px] font-bold uppercase tracking-[0.25em] transition-transform active:scale-95 shadow-lg shadow-primary/10">
