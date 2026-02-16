@@ -1,9 +1,10 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Scale } from "lucide-react";
+
+const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,11 +29,11 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-12 font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400">
           <a href="#defensa" className="hover:text-primary transition-colors">Defensa</a>
           <a href="#metodologia" className="hover:text-primary transition-colors">Método</a>
-          <a href="#contacto" className="hover:text-primary transition-colors">Contacto</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Urgencias</a>
         </div>
 
-        <Button asChild className="gold-metallic-gradient text-black rounded-none h-12 px-8 text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 hover:brightness-110">
-          <a href="#contacto">Consulta Urgente</a>
+        <Button asChild className="gold-metallic-gradient text-black rounded-none h-12 px-8 text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 hover:brightness-110 border-none outline-none">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Consulta Urgente</a>
         </Button>
       </div>
     </nav>

@@ -1,9 +1,10 @@
-
 'use client';
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ShieldAlert, TrendingUp } from 'lucide-react';
+
+const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
 
 export const Hero = () => {
   return (
@@ -24,7 +25,7 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold font-headline mb-8 leading-[0.95] tracking-authority">
+          <h1 className="text-6xl md:text-8xl font-bold font-headline mb-8 leading-[0.95] tracking-authority text-white">
             Cuando el Estado Actúa, <br />
             <span className="gold-text-gradient italic">Cada Movimiento Cuenta</span>
           </h1>
@@ -35,10 +36,10 @@ export const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-6">
             <Button asChild className="gold-metallic-gradient text-black font-bold h-16 px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine">
-              <a href="#contacto">Evaluar Mi Caso Ahora</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Evaluar Mi Caso Ahora</a>
             </Button>
-            <Button variant="outline" className="h-16 px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-xs">
-              <a href="#defensa" className="flex items-center gap-2">
+            <Button asChild variant="outline" className="h-16 px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-xs">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Estoy Bajo Investigación <TrendingUp className="h-4 w-4" />
               </a>
             </Button>

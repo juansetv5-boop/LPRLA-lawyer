@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -27,7 +26,7 @@ export const Footer = () => {
             <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Contacto</h4>
             <ul className="space-y-4 text-xs font-light tracking-widest text-slate-400">
               <li>Centro Histórico, Popayán</li>
-              <li className="text-white font-bold">+57 300 000 0000</li>
+              <li className="text-white font-bold">+57 312 793 0898</li>
               <li>defensa@rlp.sas</li>
             </ul>
           </div>
@@ -36,7 +35,7 @@ export const Footer = () => {
             <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Seguridad Jurídica</h4>
             <div className="flex items-center gap-3 text-slate-500">
               <ShieldCheck className="h-10 w-10 opacity-20" />
-              <span className="text-[10px] uppercase leading-relaxed">Protección de datos bajo secreto profesional.</span>
+              <span className="text-[10px] uppercase leading-relaxed">Protección de datos bajo secreto profesional legal.</span>
             </div>
           </div>
         </div>
