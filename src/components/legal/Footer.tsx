@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="lg:col-span-5">
             <div className="mb-12">
               <span className="font-headline text-3xl font-bold text-white tracking-[0.2em] block uppercase">RLP.sas</span>
-              <span className="text-[11px] font-bold text-primary tracking-[0.5em] uppercase mt-2 block">Popayán • Eternal Justice Design</span>
+              <span className="text-[11px] font-bold text-primary tracking-[0.5em] uppercase mt-2 block">Popayán • Justicia de Autoridad</span>
             </div>
             <p className="text-sm leading-loose mb-12 font-light max-w-md">
               Firma boutique especializada en la defensa técnica ante el poder punitivo del Estado. Excelencia analítica arraigada en los fundamentos eternos del Derecho.

@@ -8,14 +8,14 @@ export const Navbar = () => {
         <div className="flex items-center gap-3">
           <div className="flex flex-col leading-none">
             <span className="font-headline text-xl md:text-2xl font-bold text-white tracking-[0.2em] uppercase">RLP.sas</span>
-            <span className="text-[9px] font-medium text-primary tracking-[0.5em] uppercase mt-1">Eternal Justice • Popayán</span>
+            <span className="text-[9px] font-medium text-primary tracking-[0.5em] uppercase mt-1">Justicia Eterna • Popayán</span>
           </div>
         </div>
         
         <nav className="hidden lg:flex items-center gap-10 font-medium text-[10px] uppercase tracking-[0.3em] text-white/60">
           <a className="hover:text-primary transition-colors" href="#defensa">Especialidades</a>
           <a className="hover:text-primary transition-colors" href="#compliance">Cumplimiento</a>
-          <a className="hover:text-primary transition-colors" href="#estrategia">Táctica</a>
+          <a className="hover:text-primary transition-colors" href="#liderazgo">Liderazgo</a>
           <a className="hover:text-primary transition-colors" href="#contacto">Contacto</a>
         </nav>
 

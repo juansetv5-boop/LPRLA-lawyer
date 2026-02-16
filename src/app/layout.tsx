@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'RLP.sas | Representación Legal Popayán',
-  description: 'Defensa legal de élite con fundamentos eternos y tecnología moderna.',
+  description: 'Defensa legal de élite con fundamentos eternos y tecnología moderna en Popayán.',
 };
 
 export default function RootLayout({

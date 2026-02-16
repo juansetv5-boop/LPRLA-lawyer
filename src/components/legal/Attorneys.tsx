@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const team = [
   {
@@ -19,7 +18,7 @@ const team = [
 
 export const Attorneys = () => {
   return (
-    <section className="py-48 bg-background overflow-hidden">
+    <section className="py-48 bg-background overflow-hidden" id="liderazgo">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center mb-24">
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.6em] mb-4">Nuestro Liderazgo</span>

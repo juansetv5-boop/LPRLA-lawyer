@@ -49,7 +49,7 @@ export const Compliance = () => {
                   <p className="text-foreground/50 text-xs">Asistencia inmediata ante la FGN.</p>
                 </div>
                 <div className="border-l border-primary/30 pl-6">
-                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Policial</span>
+                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Policivo</span>
                   <p className="text-foreground/50 text-xs">Justicia administrativa y policiva.</p>
                 </div>
               </div>

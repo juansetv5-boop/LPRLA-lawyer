@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ''}
-          alt={heroImg?.description || 'Legal Heritage'}
+          alt={heroImg?.description || 'Herencia Legal'}
           fill
           className="object-cover grayscale brightness-[0.2] contrast-[1.1]"
           priority

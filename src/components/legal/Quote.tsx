@@ -6,7 +6,7 @@ export const Quote = () => {
     <section className="py-48 bg-card border-y border-primary/10 overflow-hidden relative">
       <div className="absolute inset-0 opacity-[0.05]">
         <img 
-          alt="Atmospheric classical architecture" 
+          alt="Arquitectura clásica atmosférica" 
           className="w-full h-full object-cover grayscale" 
           src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80"
         />

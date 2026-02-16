@@ -14,7 +14,7 @@ const formSchema = z.object({
   name: z.string().min(2, "El nombre es requerido"),
   email: z.string().email("Correo electrónico inválido"),
   subject: z.string().min(5, "El asunto debe ser más descriptivo"),
-  message: z.string().min(10, "Por favor detalle su caso"),
+  message: z.string().min(10, "Por favor, detalle su caso"),
 });
 
 export const ContactForm = () => {
