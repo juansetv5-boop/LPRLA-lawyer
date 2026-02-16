@@ -1,57 +1,58 @@
+
+'use client';
+
 import React from 'react';
-import { MapPin, PhoneCall, Mail } from 'lucide-react';
+import { Scale, ShieldCheck } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-background text-foreground/40 py-40 border-t border-primary/10 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.02] ancient-texture pointer-events-none"></div>
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-20 mb-32">
-          <div className="lg:col-span-5">
-            <div className="mb-12">
-              <span className="font-headline text-3xl font-bold text-white tracking-[0.2em] block uppercase">RLP.sas</span>
-              <span className="text-[11px] font-bold text-primary tracking-[0.5em] uppercase mt-2 block">Popayán • Justicia de Autoridad</span>
+    <footer className="bg-black border-t border-primary/10 pt-24 pb-12 overflow-hidden relative">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-4 gap-16 mb-20">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-4 mb-8">
+              <Scale className="h-10 w-10 text-primary" />
+              <div className="flex flex-col">
+                <span className="font-headline text-3xl font-bold text-white tracking-widest uppercase">RLP.sas</span>
+                <span className="text-[11px] font-bold text-primary tracking-[0.6em] uppercase">Popayán • Colombia</span>
+              </div>
             </div>
-            <p className="text-sm leading-loose mb-12 font-light max-w-md">
-              Firma boutique especializada en la defensa técnica ante el poder punitivo del Estado. Excelencia analítica arraigada en los fundamentos eternos del Derecho.
+            <p className="text-slate-500 max-w-md leading-relaxed font-light italic">
+              "Defensa con criterio. Sin improvisación." <br />
+              Firma especializada en el blindaje de funcionarios y particulares frente al poder sancionatorio del Estado.
             </p>
           </div>
 
-          <div className="lg:col-span-3">
-            <h4 className="text-white font-bold mb-10 text-[11px] uppercase tracking-[0.4em]">Ubicación</h4>
-            <ul className="space-y-8 text-[12px] font-light uppercase tracking-widest">
-              <li className="flex items-start gap-4">
-                <MapPin className="text-primary h-5 w-5" />
-                <span>Centro Histórico, <br/>Popayán, Colombia</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <PhoneCall className="text-primary h-5 w-5" />
-                <span>Urgencias 24/7</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Mail className="text-primary h-5 w-5" />
-                <span>contacto@rlp.sas</span>
-              </li>
+          <div>
+            <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Contacto</h4>
+            <ul className="space-y-4 text-xs font-light tracking-widest text-slate-400">
+              <li>Centro Histórico, Popayán</li>
+              <li className="text-white font-bold">+57 300 000 0000</li>
+              <li>defensa@rlp.sas</li>
             </ul>
           </div>
 
-          <div className="lg:col-span-4">
-            <h4 className="text-white font-bold mb-10 text-[11px] uppercase tracking-[0.4em]">Áreas de Práctica</h4>
-            <ul className="grid grid-cols-1 gap-6 text-[12px] font-light uppercase tracking-widest">
-              <li><a className="hover:text-primary border-l border-white/10 pl-4 transition-all" href="#defensa">Defensa Penal Técnica</a></li>
-              <li><a className="hover:text-primary border-l border-white/10 pl-4 transition-all" href="#compliance">Compliance Sancionatorio</a></li>
-              <li><a className="hover:text-primary border-l border-white/10 pl-4 transition-all" href="#defensa">Recursos de Casación</a></li>
-            </ul>
+          <div>
+            <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Seguridad Jurídica</h4>
+            <div className="flex items-center gap-3 text-slate-500">
+              <ShieldCheck className="h-10 w-10 opacity-20" />
+              <span className="text-[10px] uppercase leading-relaxed">Protección de datos bajo secreto profesional.</span>
+            </div>
           </div>
         </div>
 
-        <div className="pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.5em]">
-          <p>© 2024 RLP.sas Popayán. Justicia de Autoridad.</p>
-          <div className="flex gap-14 mt-8 md:mt-0">
-            <a className="hover:text-primary transition-colors" href="#">Privacidad</a>
-            <a className="hover:text-primary transition-colors" href="#">Términos</a>
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.5em] text-slate-600 font-bold">
+          <p>© 2024 Representación Legal Popayán. Todos los derechos reservados.</p>
+          <div className="flex gap-10 mt-6 md:mt-0">
+            <a href="#" className="hover:text-primary transition-colors">Aviso Legal</a>
+            <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
           </div>
         </div>
+      </div>
+      
+      {/* Decorative Large Text */}
+      <div className="absolute bottom-[-10%] right-[-5%] text-[20vw] font-headline font-bold text-white/[0.02] leading-none pointer-events-none select-none">
+        RLP
       </div>
     </footer>
   );

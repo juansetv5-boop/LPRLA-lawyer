@@ -1,47 +1,50 @@
-import React from 'react';
-import { Shield, Landmark, Scale } from 'lucide-react';
 
-const services = [
-  {
-    title: "Justicia Penal",
-    description: "Estrategia técnica y argumentativa basada en el rigor dogmático penal más avanzado.",
-    icon: <Scale className="text-primary h-12 w-12" />,
-    image: "https://picsum.photos/seed/crime/600/800"
+'use client';
+
+import React from 'react';
+import { Gavel, Landmark, ShieldAlert } from 'lucide-react';
+
+const cards = [
+  { 
+    title: "Defensa Penal Estratégica", 
+    desc: "Control inmediato de imputaciones y movimientos tempranos ante la Fiscalía.", 
+    icon: <ShieldAlert className="h-8 w-8 text-primary" />,
+    hint: "legal strategy"
   },
-  {
-    title: "Derecho Disciplinario",
-    description: "Protección técnica para funcionarios de alto nivel ante órganos de control y vigilancia.",
-    icon: <Landmark className="text-primary h-12 w-12" />,
-    image: "https://picsum.photos/seed/admin/600/800"
+  { 
+    title: "Defensa Disciplinaria", 
+    desc: "Actuación técnica frente a investigaciones que cuestan el cargo y la reputación.", 
+    icon: <Landmark className="h-8 w-8 text-primary" />,
+    hint: "government building"
   },
-  {
-    title: "Responsabilidad Fiscal",
-    description: "Defensa patrimonial frente a procesos coactivos y hallazgos de entes territoriales.",
-    icon: <Shield className="text-primary h-12 w-12" />,
-    image: "https://picsum.photos/seed/fiscal/600/800"
+  { 
+    title: "Responsabilidad Fiscal", 
+    desc: "Blindaje patrimonial ante hallazgos de entes de control territorial y nacional.", 
+    icon: <Gavel className="h-8 w-8 text-primary" />,
+    hint: "legal gavel"
   }
 ];
 
 export const Services = () => {
   return (
-    <section className="py-48 bg-background relative overflow-hidden" id="defensa">
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none ancient-texture"></div>
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col items-center text-center mb-32">
-          <span className="text-primary text-[10px] font-bold uppercase tracking-[0.6em] mb-4">Especialidad de Élite</span>
-          <h2 className="text-4xl md:text-5xl mb-8 font-bold font-headline">Áreas de Práctica</h2>
-          <div className="h-px w-32 gold-foil-gradient"></div>
+    <section className="py-32 bg-black" id="defensa">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-24">
+          <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Especialidades de Alto Riesgo</span>
+          <h2 className="text-5xl font-bold font-headline">Defensa Penal: <br /><span className="gold-text-gradient">Cuando el Riesgo es Real</span></h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, idx) => (
-            <div key={idx} className="relative group overflow-hidden gold-border-subtle bg-card aspect-[4/5] flex flex-col justify-end p-12 transition-all duration-500 hover:-translate-y-2">
-              <div className="absolute inset-0 opacity-10 grayscale group-hover:opacity-30 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: `url(${service.image})` }}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-              <div className="relative z-10">
-                <div className="mb-6">{service.icon}</div>
-                <h3 className="text-2xl mb-4 gold-text-gradient font-headline font-bold">{service.title}</h3>
-                <p className="text-foreground/60 leading-relaxed text-sm font-light">{service.description}</p>
+          {cards.map((card, idx) => (
+            <div key={idx} className="group relative p-12 bg-secondary/30 border border-primary/10 hover:border-primary/40 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-5 transform group-hover:scale-110 transition-transform">
+                {React.cloneElement(card.icon as React.ReactElement, { className: 'h-32 w-32' })}
+              </div>
+              <div className="mb-8">{card.icon}</div>
+              <h3 className="text-2xl font-bold font-headline mb-4 text-white group-hover:text-primary transition-colors">{card.title}</h3>
+              <p className="text-slate-500 leading-relaxed font-light">{card.desc}</p>
+              <div className="mt-8 pt-8 border-t border-white/5 flex items-center gap-2 text-[10px] uppercase tracking-widest text-primary/60 font-bold group-hover:text-primary transition-colors">
+                Ver Estrategia <span>→</span>
               </div>
             </div>
           ))}

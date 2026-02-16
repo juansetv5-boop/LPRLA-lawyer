@@ -1,34 +1,30 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 2%;
-    --foreground: 0 0% 82%;
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 39 45% 56%;
-    --primary-foreground: 0 0% 2%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 39 45% 56%;
+    --background: 0 0% 0%;
+    --foreground: 215 16% 83%;
+    --card: 0 0% 3%;
+    --card-foreground: 215 16% 95%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 215 16% 95%;
+    --primary: 46 65% 52%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 46 65% 52%;
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 39 61% 76%;
-    --accent-foreground: 0 0% 2%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 39 45% 20%;
-    --input: 39 45% 15%;
-    --ring: 39 45% 56%;
-    --radius: 0rem;
-    --chart-1: 39 45% 56%;
-    --chart-2: 41 61% 76%;
-    --chart-3: 39 51% 37%;
-    --chart-4: 0 0% 40%;
-    --chart-5: 0 0% 20%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 46 65% 70%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 46 65% 20%;
+    --input: 46 65% 15%;
+    --ring: 46 65% 52%;
+    --radius: 0.1rem;
   }
 }
 
@@ -37,35 +33,44 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body antialiased selection:bg-primary selection:text-primary-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-white tracking-wider;
+    @apply font-headline tracking-tight text-white;
   }
 }
 
-.gold-foil-gradient {
-  background: linear-gradient(135deg, #8E6D2E 0%, #C5A059 25%, #F2E2BA 50%, #C5A059 75%, #8E6D2E 100%);
+.gold-metallic-gradient {
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   background-size: 200% 200%;
 }
 
 .gold-text-gradient {
-  background: linear-gradient(to right, #C5A059, #F2E2BA, #8E6D2E);
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-border-subtle {
-  border: 1px solid rgba(197, 160, 89, 0.2);
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .hero-overlay {
-  background: linear-gradient(to right, rgba(5, 5, 5, 0.98) 0%, rgba(5, 5, 5, 0.85) 40%, rgba(5, 5, 5, 0.4) 100%);
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%);
 }
 
-.ancient-texture {
-  background-image: url("https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80");
-  background-repeat: repeat;
-  background-size: 400px;
-  mix-blend-mode: overlay;
+.animate-gold-shine {
+  animation: gold-shine 3s linear infinite;
+}
+
+@keyframes gold-shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Letter Spacing for Authority */
+.tracking-authority {
+  letter-spacing: -0.02em;
 }

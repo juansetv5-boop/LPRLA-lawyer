@@ -1,0 +1,44 @@
+
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead de Cliente",
+      "description": "Información de contacto de clientes potenciales interesados en defensa legal.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Nombre completo del solicitante"
+        },
+        "whatsapp": {
+          "type": "string",
+          "description": "Número de WhatsApp para contacto inmediato"
+        },
+        "caseType": {
+          "type": "string",
+          "description": "Tipo de proceso o situación legal"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "contacted", "qualified", "closed"],
+          "description": "Estado del seguimiento del lead"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Fecha y hora de creación"
+        }
+      },
+      "required": ["name", "whatsapp", "createdAt"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Colección de leads capturados desde el formulario de contacto."
+    }
+  }
+}

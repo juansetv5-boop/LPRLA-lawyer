@@ -1,51 +1,56 @@
+
+'use client';
+
 import React from 'react';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import { ShieldAlert, TrendingUp } from 'lucide-react';
 
 export const Hero = () => {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-statue');
-
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-black">
+      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={heroImg?.imageUrl || ''}
-          alt={heroImg?.description || 'Herencia Legal'}
-          fill
-          className="object-cover grayscale brightness-[0.2] contrast-[1.1]"
-          priority
-          data-ai-hint="lady justice"
-        />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 grayscale brightness-50"></div>
         <div className="absolute inset-0 hero-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30"></div>
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-4xl animate-fade-in-up">
-          <div className="inline-block mb-10 overflow-hidden">
-            <span className="text-primary text-xs font-semibold uppercase tracking-[0.5em] block mb-2">Defensa de Autoridad • Popayán</span>
-            <div className="h-[1px] w-full gold-foil-gradient"></div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl">
+          <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 border border-primary/30 bg-primary/5">
+            <ShieldAlert className="h-4 w-4 text-primary animate-pulse" />
+            <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em]">
+              Defensa Penal y Sancionatoria • Actuación Inmediata
+            </span>
           </div>
-          
-          <h1 className="text-5xl md:text-8xl leading-[1.1] mb-12 text-white font-bold italic font-headline">
-            Justicia de <br/>
-            <span className="gold-text-gradient not-italic">Fundamentos</span>
+
+          <h1 className="text-6xl md:text-8xl font-bold font-headline mb-8 leading-[0.95] tracking-authority">
+            Cuando el Estado Actúa, <br />
+            <span className="gold-text-gradient italic">Cada Movimiento Cuenta</span>
           </h1>
-          
-          <p className="text-xl text-white/70 mb-14 leading-relaxed max-w-2xl font-light">
-            Conectamos la maestría jurídica moderna con los principios milenarios de la defensa. Blindamos su libertad bajo la solidez inquebrantable de la tradición legal clásica.
+
+          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl font-light leading-relaxed">
+            Una citación, una auditoría o una imputación mal manejada puede definir todo el proceso. Aquí no se improvisa: se analiza rápido, se identifica la grieta y se actúa con estrategia.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6">
-            <a className="gold-foil-gradient text-background px-12 py-6 font-bold text-xs uppercase tracking-[0.3em] hover:brightness-110 transition-all flex items-center justify-center gap-4 shadow-xl shadow-primary/20" href="#contacto">
-              Desplegar Defensa
-            </a>
-            <a className="border border-white/30 text-white px-12 py-6 font-bold text-xs uppercase tracking-[0.3em] hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-4" href="#defensa">
-              Nuestros Servicios
-            </a>
+            <Button asChild className="gold-metallic-gradient text-black font-bold h-16 px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine">
+              <a href="#contacto">Evaluar Mi Caso Ahora</a>
+            </Button>
+            <Button variant="outline" className="h-16 px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-xs">
+              <a href="#defensa" className="flex items-center gap-2">
+                Estoy Bajo Investigación <TrendingUp className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
+      </div>
+
+      {/* Decorative Chess Element */}
+      <div className="absolute right-[-10%] bottom-[-5%] opacity-10 pointer-events-none hidden lg:block">
+        <svg width="600" height="600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5L20 95H80L50 5Z" stroke="currentColor" strokeWidth="0.2" className="text-primary" />
+        </svg>
       </div>
     </section>
   );
