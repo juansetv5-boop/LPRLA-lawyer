@@ -37,15 +37,15 @@ export const LeadForm = () => {
             
             <div className="mb-10">
               <MessageCircle className="h-16 w-16 text-primary mx-auto mb-6 animate-pulse" />
-              <h3 className="text-2xl font-headline text-white mb-4">Despliegue de Defensa Técnica</h3>
-              <p className="text-slate-400 text-sm font-light max-w-xs mx-auto">
-                Haga clic abajo para iniciar comunicacion directa con nuestra mesa de crisis.
+              <h3 className="text-2xl font-headline text-white mb-4 uppercase tracking-widest">Despliegue de Defensa Técnica</h3>
+              <p className="text-slate-400 text-sm font-light max-w-xs mx-auto mb-8">
+                Haga clic abajo para iniciar comunicación directa con nuestra mesa de crisis.
               </p>
             </div>
 
             <Button asChild className="w-full gold-metallic-gradient text-black font-bold h-20 rounded-none text-sm uppercase tracking-[0.3em] border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-                Hablar con un Abogado Ahora
+                HABLAR CON UN ABOGADO AHORA
               </a>
             </Button>
             
