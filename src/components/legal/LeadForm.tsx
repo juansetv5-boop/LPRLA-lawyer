@@ -32,27 +32,30 @@ export const LeadForm = () => {
             </div>
           </div>
 
-          <div className="p-12 bg-secondary/30 border border-primary/20 relative group text-center flex flex-col items-center justify-center">
+          <a 
+            href={WHATSAPP_URL} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="p-12 bg-secondary/30 border border-primary/20 relative group text-center flex flex-col items-center justify-center transition-all hover:border-primary/60 cursor-pointer"
+          >
             <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             
-            <div className="mb-10">
+            <div className="mb-10 relative z-10">
               <MessageCircle className="h-16 w-16 text-primary mx-auto mb-6 animate-pulse" />
               <h3 className="text-2xl font-headline text-white mb-4 uppercase tracking-widest">Despliegue de Defensa Técnica</h3>
               <p className="text-slate-400 text-sm font-light max-w-xs mx-auto mb-8">
-                Haga clic abajo para iniciar comunicación directa con nuestra mesa de crisis.
+                Haga clic en cualquier parte de este recuadro para iniciar comunicación directa con nuestra mesa de crisis.
               </p>
             </div>
 
-            <Button asChild className="w-full gold-metallic-gradient text-black font-bold h-20 rounded-none text-sm uppercase tracking-[0.3em] border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-                HABLAR CON UN ABOGADO AHORA
-              </a>
+            <Button className="w-full gold-metallic-gradient text-black font-bold h-20 rounded-none text-sm uppercase tracking-[0.3em] border-none shadow-2xl shadow-primary/20 group-hover:scale-[1.02] transition-all pointer-events-none">
+              HABLAR CON UN ABOGADO AHORA
             </Button>
             
-            <p className="mt-6 text-[10px] text-primary/60 uppercase tracking-widest font-bold">
+            <p className="mt-6 text-[10px] text-primary/60 uppercase tracking-widest font-bold relative z-10">
               Canal de atención prioritaria 24/7
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
