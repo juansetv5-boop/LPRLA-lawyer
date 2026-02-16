@@ -20,7 +20,7 @@ export const Quote = () => {
           <div className="flex flex-col items-center">
             <div className="h-px w-20 gold-foil-gradient mb-6"></div>
             <p className="font-bold text-white tracking-[0.4em] uppercase text-xs mb-2">Director de Litigio</p>
-            <p className="text-primary text-[10px] tracking-[0.6em] uppercase font-semibold">Lex Digitalis Popayán</p>
+            <p className="text-primary text-[10px] tracking-[0.6em] uppercase font-semibold">RLP.sas Popayán</p>
           </div>
         </div>
       </div>

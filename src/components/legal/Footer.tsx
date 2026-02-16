@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-12 gap-20 mb-32">
           <div className="lg:col-span-5">
             <div className="mb-12">
-              <span className="font-headline text-3xl font-bold text-white tracking-[0.2em] block uppercase">Lex Digitalis</span>
+              <span className="font-headline text-3xl font-bold text-white tracking-[0.2em] block uppercase">RLP.sas</span>
               <span className="text-[11px] font-bold text-primary tracking-[0.5em] uppercase mt-2 block">Popayán • Eternal Justice Design</span>
             </div>
             <p className="text-sm leading-loose mb-12 font-light max-w-md">
@@ -30,7 +30,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="text-primary h-5 w-5" />
-                <span>contacto@lexdigitalis.com</span>
+                <span>contacto@rlp.sas</span>
               </li>
             </ul>
           </div>
@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.5em]">
-          <p>© 2024 Lex Digitalis Popayán. Justicia de Autoridad.</p>
+          <p>© 2024 RLP.sas Popayán. Justicia de Autoridad.</p>
           <div className="flex gap-14 mt-8 md:mt-0">
             <a className="hover:text-primary transition-colors" href="#">Privacidad</a>
             <a className="hover:text-primary transition-colors" href="#">Términos</a>

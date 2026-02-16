@@ -7,7 +7,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="flex flex-col leading-none">
-            <span className="font-headline text-xl md:text-2xl font-bold text-white tracking-[0.2em] uppercase">Lex Digitalis</span>
+            <span className="font-headline text-xl md:text-2xl font-bold text-white tracking-[0.2em] uppercase">RLP.sas</span>
             <span className="text-[9px] font-medium text-primary tracking-[0.5em] uppercase mt-1">Eternal Justice • Popayán</span>
           </div>
         </div>

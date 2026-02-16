@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Lex Digitalis | Representación Legal Popayán',
+  title: 'RLP.sas | Representación Legal Popayán',
   description: 'Defensa legal de élite con fundamentos eternos y tecnología moderna.',
 };
 
