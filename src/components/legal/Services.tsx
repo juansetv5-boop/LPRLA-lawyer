@@ -3,7 +3,7 @@
 import React from 'react';
 import { Gavel, Landmark, ShieldAlert } from 'lucide-react';
 
-const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20necesito%20informaci%C3%B3n%20sobre%20estrategia%20de%20defensa%20especializada.";
+const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
 
 const cards = [
   { 
