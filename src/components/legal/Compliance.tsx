@@ -1,58 +1,48 @@
+'use client';
+
 import React from 'react';
-import { Verified, Gavel } from 'lucide-react';
+import { ShieldCheck, Search, Activity } from 'lucide-react';
 
 export const Compliance = () => {
   return (
-    <section className="py-48 bg-card relative border-y border-primary/10" id="compliance">
-      <div className="absolute inset-0 opacity-[0.02] ancient-texture pointer-events-none"></div>
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+    <section className="py-32 bg-black border-t border-primary/10" id="compliance">
+      <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-6">Prevención de Riesgos</span>
-            <h2 className="text-4xl md:text-5xl mb-8 leading-tight font-bold font-headline">Compliance & <br/><span className="italic text-white/80">Gestión de Riesgos</span></h2>
-            <p className="text-foreground/60 font-light leading-relaxed mb-12 max-w-xl">
-              Anticipamos y neutralizamos riesgos corporativos. Diseñamos estructuras de cumplimiento normativo (Compliance) que actúan como un escudo ante el aparato sancionatorio del Estado.
+            <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-4">
+              Prevención y Control de Riesgo
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold font-headline mb-8 text-white leading-tight">
+              Compliance & <br />
+              <span className="gold-text-gradient italic">Defensa Preventiva</span>
+            </h2>
+            <p className="text-slate-400 font-light text-lg mb-12 max-w-md leading-relaxed">
+              No espero a que el proceso avance para reaccionar. <br />
+              Diseñamos estructuras de cumplimiento y estrategias preventivas que reducen exposición penal y sancionatoria.
             </p>
-            <div className="space-y-8">
-              <div className="flex gap-6 items-start">
-                <Verified className="text-primary h-6 w-6 shrink-0" />
-                <div>
-                  <h4 className="text-white uppercase tracking-widest text-sm mb-2 font-bold">Auditoría Preventiva</h4>
-                  <p className="text-foreground/40 text-xs leading-relaxed">Blindaje en procesos de contratación y gestión de recursos públicos.</p>
-                </div>
-              </div>
-              <div className="flex gap-6 items-start">
-                <Gavel className="text-primary h-6 w-6 shrink-0" />
-                <div>
-                  <h4 className="text-white uppercase tracking-widest text-sm mb-2 font-bold">Defensa Administrativa</h4>
-                  <p className="text-foreground/40 text-xs leading-relaxed">Litigio especializado ante superintendencias y organismos reguladores.</p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-4 gold-foil-gradient opacity-10 blur-2xl"></div>
-            <div className="relative gold-border-subtle p-12 bg-background aspect-video flex flex-col justify-center">
-              <h3 className="text-3xl mb-8 gold-text-gradient font-headline font-bold">Entes de Control</h3>
-              <div className="grid grid-cols-2 gap-8">
-                <div className="border-l border-primary/30 pl-6">
-                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Disciplinario</span>
-                  <p className="text-foreground/50 text-xs">Defensa ante la PGN y personerías.</p>
-                </div>
-                <div className="border-l border-primary/30 pl-6">
-                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Fiscal</span>
-                  <p className="text-foreground/50 text-xs">Gestión ante CGR y procesos coactivos.</p>
-                </div>
-                <div className="border-l border-primary/30 pl-6">
-                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Penal</span>
-                  <p className="text-foreground/50 text-xs">Asistencia inmediata ante la FGN.</p>
-                </div>
-                <div className="border-l border-primary/30 pl-6">
-                  <span className="text-[10px] uppercase tracking-widest text-primary block mb-2 font-bold">Policivo</span>
-                  <p className="text-foreground/50 text-xs">Justicia administrativa y policiva.</p>
-                </div>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="group p-10 bg-secondary/20 border border-primary/10 hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="h-24 w-24 text-primary" />
               </div>
+              <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6">Auditoría Preventiva</h4>
+              <h3 className="text-2xl font-bold font-headline mb-4 text-white">Auditoría Estratégica</h3>
+              <p className="text-slate-500 text-sm font-light leading-relaxed">
+                Evaluación jurídica integral para detectar vulnerabilidades antes de que se conviertan en investigación.
+              </p>
+            </div>
+
+            <div className="group p-10 bg-secondary/30 border-l-2 border-primary/30 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform text-white">
+                <Activity className="h-24 w-24" />
+              </div>
+              <h4 className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6">Control Proactivo</h4>
+              <h3 className="text-2xl font-bold font-headline mb-4 text-white">Mitigación de Riesgos</h3>
+              <p className="text-slate-500 text-sm font-light leading-relaxed">
+                Blindaje de procesos internos para evitar hallazgos que comprometan la estabilidad institucional o personal.
+              </p>
             </div>
           </div>
         </div>

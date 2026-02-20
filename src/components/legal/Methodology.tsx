@@ -11,35 +11,13 @@ const phases = [
 ];
 
 export const Methodology = () => {
-  const [activePhase, setActivePhase] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute('data-index'));
-            setActivePhase(index);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    const items = containerRef.current?.querySelectorAll('.phase-item');
-    items?.forEach((item) => observer.observe(item));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="py-32 bg-black overflow-hidden" id="metodologia">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20">
           <div>
             <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-6">El Tablero de Control</span>
-            <h2 className="text-5xl font-bold font-headline mb-12 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold font-headline mb-12 leading-tight">
               La Defensa No Es Reacción. <br />
               <span className="gold-text-gradient">Es Anticipación.</span>
             </h2>
@@ -48,18 +26,17 @@ export const Methodology = () => {
             </p>
           </div>
 
-          <div ref={containerRef} className="space-y-12 relative">
+          <div className="space-y-12 relative">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-white/10"></div>
-            {phases.map((phase, idx) => (
-              <div 
-                key={phase.id} 
-                data-index={idx}
-                className={`phase-item relative pl-20 transition-all duration-700 ${activePhase === idx ? 'opacity-100 translate-x-2' : 'opacity-30'}`}
+            {phases.map((phase) => (
+              <div
+                key={phase.id}
+                className="phase-item relative pl-20"
               >
-                <div className={`absolute left-0 top-0 w-12 h-12 flex items-center justify-center border transition-colors duration-500 ${activePhase === idx ? 'border-primary bg-primary text-black' : 'border-white/20 text-white/40'}`}>
+                <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center border border-primary bg-primary text-black">
                   <span className="text-sm font-bold">{phase.id}</span>
                 </div>
-                <h4 className={`text-xl font-bold mb-3 ${activePhase === idx ? 'text-primary' : 'text-white'}`}>
+                <h4 className="text-xl font-bold mb-3 text-primary">
                   {phase.title}
                 </h4>
                 <p className="text-slate-500 text-sm leading-relaxed max-w-sm">

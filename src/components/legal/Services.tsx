@@ -34,11 +34,8 @@ export const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
-            <a
+            <div
               key={idx}
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group relative p-12 bg-secondary/30 border border-primary/10 hover:border-primary/40 transition-all duration-500 overflow-hidden block"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5 transform group-hover:scale-110 transition-transform">
@@ -48,9 +45,9 @@ export const Services = () => {
               <h3 className="text-2xl font-bold font-headline mb-4 text-white group-hover:text-primary transition-colors">{card.title}</h3>
               <p className="text-slate-500 leading-relaxed font-light">{card.desc}</p>
               <div className="mt-8 pt-8 border-t border-white/5 flex items-center gap-2 text-[10px] uppercase tracking-widest text-primary/60 font-bold group-hover:text-primary transition-colors">
-                Ver Estrategia <span>→</span>
+                Estrategia Especializada <span>→</span>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

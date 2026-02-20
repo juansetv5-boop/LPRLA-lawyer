@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md min-h-20 border-b border-primary/20' : 'bg-transparent min-h-28'} flex items-center`}>
-      <div className="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-start gap-4 md:gap-8">
         <div className="flex items-center gap-3">
           <Scale className="h-6 w-6 md:h-8 md:w-8 text-primary" />
           <div className="flex flex-col gap-0.5 md:gap-1">
@@ -26,11 +26,7 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-12 font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400">
-          {/* Unwanted links removed per request */}
-        </div>
-
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <Button asChild className="gold-metallic-gradient text-black rounded-none h-10 md:h-12 px-4 md:px-8 text-[9px] md:text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 hover:brightness-110 border-none outline-none">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Consulta Urgente</a>
           </Button>
