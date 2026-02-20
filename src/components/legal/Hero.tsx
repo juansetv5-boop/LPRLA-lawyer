@@ -25,20 +25,20 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold font-headline mb-8 leading-[0.95] tracking-authority text-white">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold font-headline mb-8 leading-[1.1] md:leading-[0.95] tracking-authority text-white">
             Cuando el Estado Actúa, <br />
             <span className="gold-text-gradient italic">Cada Movimiento Cuenta</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl font-light leading-relaxed">
+          <p className="text-lg md:text-2xl text-slate-400 mb-12 max-w-2xl font-light leading-relaxed">
             Una citación, una auditoría o una imputación mal manejada puede definir todo el proceso. Aquí no se improvisa: se analiza rápido, se identifica la grieta y se actúa con estrategia.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6">
-            <Button asChild className="gold-metallic-gradient text-black font-bold h-16 px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine">
+          <div className="flex flex-col md:flex-row gap-4">
+            <Button asChild className="gold-metallic-gradient text-black font-bold h-14 md:h-16 px-6 md:px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine text-[10px] md:text-sm">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Evaluar Mi Caso Ahora</a>
             </Button>
-            <Button asChild variant="outline" className="h-16 px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-xs">
+            <Button asChild variant="outline" className="h-14 md:h-16 px-6 md:px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-[10px] md:text-xs">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Estoy Bajo Investigación <TrendingUp className="h-4 w-4" />
               </a>

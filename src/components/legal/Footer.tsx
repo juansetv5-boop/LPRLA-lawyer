@@ -13,7 +13,7 @@ export const Footer = () => {
               <Scale className="h-10 w-10 text-primary" />
               <div className="flex flex-col">
                 <span className="font-headline text-3xl font-bold text-white tracking-widest uppercase">RLP.sas</span>
-                <span className="text-[11px] font-bold text-primary tracking-[0.6em] uppercase">Popayán • Colombia</span>
+                <span className="text-[11px] font-bold text-primary tracking-[0.6em] uppercase mt-2">Popayán • Colombia</span>
               </div>
             </div>
             <p className="text-slate-500 max-w-md leading-relaxed font-light italic">
@@ -41,14 +41,14 @@ export const Footer = () => {
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.5em] text-slate-600 font-bold">
-          <p>© 2024 Representación Legal Popayán. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Representación Legal Popayán. Todos los derechos reservados.</p>
           <div className="flex gap-10 mt-6 md:mt-0">
-            <a href="#" className="hover:text-primary transition-colors">Aviso Legal</a>
-            <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
+            <a href="/aviso-legal" className="hover:text-primary transition-colors">Aviso Legal</a>
+            <a href="/privacidad" className="hover:text-primary transition-colors">Privacidad</a>
           </div>
         </div>
       </div>
-      
+
       {/* Decorative Large Text */}
       <div className="absolute bottom-[-10%] right-[-5%] text-[20vw] font-headline font-bold text-white/[0.02] leading-none pointer-events-none select-none">
         RLP
