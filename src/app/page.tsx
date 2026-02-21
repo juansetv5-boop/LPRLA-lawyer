@@ -9,17 +9,23 @@ import { Methodology } from '@/components/legal/Methodology';
 import { Quote } from '@/components/legal/Quote';
 import { LeadForm } from '@/components/legal/LeadForm';
 import { Footer } from '@/components/legal/Footer';
+import { LogoSeparator } from '@/components/legal/LogoSeparator';
 
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
       <Navbar />
       <Hero />
+      <LogoSeparator />
       <Services />
+      <LogoSeparator />
       <Compliance />
+      <LogoSeparator />
       <Methodology />
       <Testimonials />
+      <LogoSeparator />
       <Quote />
+      <LogoSeparator />
       <LeadForm />
       <Footer />
     </main>

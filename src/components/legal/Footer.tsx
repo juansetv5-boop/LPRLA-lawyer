@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Scale, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -9,13 +10,13 @@ export const Footer = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-8">
+            <Link href="/" className="flex items-center gap-4 mb-8 hover:opacity-80 transition-opacity cursor-pointer">
               <Scale className="h-10 w-10 text-primary" />
               <div className="flex flex-col">
                 <span className="font-headline text-3xl font-bold text-white tracking-widest uppercase">RLP.sas</span>
                 <span className="text-[11px] font-bold text-primary tracking-[0.6em] uppercase mt-2">Popayán • Colombia</span>
               </div>
-            </div>
+            </Link>
             <p className="text-slate-500 max-w-md leading-relaxed font-light italic">
               "Defensa con criterio. Sin improvisación." <br />
               Firma especializada en el blindaje de funcionarios y particulares frente al poder sancionatorio del Estado.

@@ -1,4 +1,3 @@
-
 {
   "entities": {
     "Lead": {
@@ -20,7 +19,12 @@
         },
         "status": {
           "type": "string",
-          "enum": ["new", "contacted", "qualified", "closed"],
+          "enum": [
+            "new",
+            "contacted",
+            "qualified",
+            "closed"
+          ],
           "description": "Estado del seguimiento del lead"
         },
         "createdAt": {
@@ -29,11 +33,17 @@
           "description": "Fecha y hora de creación"
         }
       },
-      "required": ["name", "whatsapp", "createdAt"]
+      "required": [
+        "name",
+        "whatsapp",
+        "createdAt"
+      ]
     }
   },
   "auth": {
-    "providers": ["google.com"]
+    "providers": [
+      "google.com"
+    ]
   },
   "firestore": {
     "/leads/{leadId}": {

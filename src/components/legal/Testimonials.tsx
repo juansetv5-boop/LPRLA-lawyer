@@ -10,6 +10,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { LogoSeparator } from './LogoSeparator';
 
 const testimonials = [
     {
@@ -72,6 +73,8 @@ export const Testimonials = () => {
                         Resultados que <br /><span className="gold-text-gradient italic">Respaldan la Estrategia</span>
                     </h2>
                 </div>
+
+                <LogoSeparator />
 
                 <div className="max-w-7xl mx-auto px-6 md:px-16">
                     <Carousel
