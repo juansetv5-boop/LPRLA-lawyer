@@ -10,7 +10,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { LogoSeparator } from './LogoSeparator';
 
 const testimonials = [
     {
@@ -65,7 +64,7 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="py-0 bg-black border-t border-primary/5">
+        <section className="pt-12 pb-0 bg-black border-t border-primary/5">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-20">
                     <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Casos de Éxito</span>
@@ -74,9 +73,7 @@ export const Testimonials = () => {
                     </h2>
                 </div>
 
-                <LogoSeparator />
-
-                <div className="max-w-7xl mx-auto px-6 md:px-16">
+                <div className="max-w-7xl mx-auto px-6 md:px-16 mb-24">
                     <Carousel
                         opts={{
                             align: "start",

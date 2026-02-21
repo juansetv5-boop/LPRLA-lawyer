@@ -12,16 +12,16 @@ const phases = [
 
 export const Methodology = () => {
   return (
-    <section className="py-0 bg-black overflow-hidden" id="metodologia">
+    <section className="pt-12 pb-0 bg-black overflow-hidden" id="metodologia">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20">
           <div>
-            <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-6">El Tablero de Control</span>
-            <h2 className="text-3xl md:text-5xl font-bold font-headline mb-12 leading-tight">
+            <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-4">El Tablero de Control</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-headline mb-8 leading-tight">
               La Defensa No Es Reacción. <br />
               <span className="gold-text-gradient">Es Anticipación.</span>
             </h2>
-            <p className="text-slate-400 font-light text-lg mb-12 max-w-md">
+            <p className="text-slate-400 font-light text-lg max-w-md">
               Cada fase de nuestro método está diseñada para recuperar la iniciativa en el proceso legal.
             </p>
           </div>

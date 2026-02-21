@@ -5,7 +5,7 @@ import { ShieldCheck, Search, Activity } from 'lucide-react';
 
 export const Compliance = () => {
   return (
-    <section className="py-0 bg-black border-t border-primary/10" id="compliance">
+    <section className="pt-12 pb-0 bg-black border-t border-primary/10" id="compliance">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
