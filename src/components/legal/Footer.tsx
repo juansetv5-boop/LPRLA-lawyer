@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Scale, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const Footer = () => {
@@ -11,7 +12,13 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-4 mb-8 hover:opacity-80 transition-opacity cursor-pointer">
-              <Scale className="h-10 w-10 text-primary" />
+              <Image
+                src="/logo-divider.png"
+                alt="RLP.sas Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain brightness-0 invert opacity-80"
+              />
               <div className="flex flex-col">
                 <span className="font-headline text-3xl font-bold text-white tracking-widest uppercase">RLP.sas</span>
                 <span className="text-[11px] font-bold text-primary tracking-[0.6em] uppercase mt-2">Popayán • Colombia</span>
