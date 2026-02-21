@@ -8,7 +8,7 @@ const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero
 
 export const LeadForm = () => {
   return (
-    <section className="py-32 bg-black border-t border-primary/10" id="contacto">
+    <section className="pt-0 pb-32 bg-black border-t border-primary/10" id="contacto">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>

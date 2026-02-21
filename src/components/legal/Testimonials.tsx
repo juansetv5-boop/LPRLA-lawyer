@@ -65,7 +65,7 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="py-32 bg-black border-t border-primary/5">
+        <section className="py-0 bg-black border-t border-primary/5">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-20">
                     <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Casos de Éxito</span>

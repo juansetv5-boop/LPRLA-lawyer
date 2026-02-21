@@ -12,7 +12,7 @@ const phases = [
 
 export const Methodology = () => {
   return (
-    <section className="py-32 bg-black overflow-hidden" id="metodologia">
+    <section className="py-0 bg-black overflow-hidden" id="metodologia">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20">
           <div>

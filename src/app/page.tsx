@@ -18,14 +18,14 @@ export default function Home() {
       <Hero />
       <LogoSeparator />
       <Services />
-      <LogoSeparator />
+      <LogoSeparator src="/logo-divider-secondary.png" width="w-32" height="h-32" mdWidth="md:w-48" mdHeight="md:h-48" />
       <Compliance />
-      <LogoSeparator />
+      <LogoSeparator src="/logo-divider-secondary.png" width="w-32" height="h-32" mdWidth="md:w-48" mdHeight="md:h-48" />
       <Methodology />
       <Testimonials />
-      <LogoSeparator />
+      <LogoSeparator src="/logo-divider-secondary.png" width="w-32" height="h-32" mdWidth="md:w-48" mdHeight="md:h-48" />
       <Quote />
-      <LogoSeparator />
+      <LogoSeparator src="/logo-divider-secondary.png" width="w-32" height="h-32" mdWidth="md:w-48" mdHeight="md:h-48" />
       <LeadForm />
       <Footer />
     </main>

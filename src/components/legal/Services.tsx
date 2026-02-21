@@ -25,7 +25,7 @@ const cards = [
 
 export const Services = () => {
   return (
-    <section className="py-32 bg-black" id="defensa">
+    <section className="pt-0 pb-0 bg-black" id="defensa">
       <div className="container mx-auto px-6">
         <div className="text-center mb-24">
           <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Especialidades de Alto Riesgo</span>
