@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Clock, MessageCircle } from 'lucide-react';
 
-const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
+const WHATSAPP_URL = "https://wa.me/573168505478?text=Hola%20RLP.sas,%20requiero%20atenci%C3%B3n%20jur%C3%ADdica%20prioritaria%20inmediata%20a%20trav%C3%A9s%20de%20su%20mesa%20de%20crisis.";
 
 export const LeadForm = () => {
   return (

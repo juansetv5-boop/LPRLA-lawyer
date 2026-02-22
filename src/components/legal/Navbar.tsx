@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
+const WHATSAPP_URL = "https://wa.me/573168505478?text=Hola%20RLP.sas,%20llego%20desde%20el%20sitio%20web%20y%20me%20gustar%C3%ADa%20programar%20una%20consulta%20legal%20especializada.";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +34,7 @@ export const Navbar = () => {
         </Link>
 
         <div className="flex items-center">
-          <Button asChild className="gold-metallic-gradient text-black rounded-none h-10 md:h-12 px-4 md:px-8 text-[9px] md:text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 hover:brightness-110 border-none outline-none">
+          <Button asChild className="gold-metallic-gradient text-black rounded-none h-10 md:h-12 px-4 md:px-8 text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/10 hover:brightness-110 border-none outline-none">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Consulta Urgente</a>
           </Button>
         </div>

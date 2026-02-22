@@ -4,7 +4,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ShieldAlert, TrendingUp } from 'lucide-react';
 
-const WHATSAPP_URL = "https://wa.me/573127930898?text=Hola%20RLP.sas,%20requiero%20asesor%C3%ADa%20legal%20especializada%20con%20urgencia.";
+const WHATSAPP_EVALUAR_URL = "https://wa.me/573168505478?text=Hola%20RLP.sas,%20requiero%20una%20evaluaci%C3%B3n%20estrat%C3%A9gica%20urgente%20de%20mi%20situaci%C3%B3n%20legal%20actual.";
+const WHATSAPP_INVESTIGACION_URL = "https://wa.me/573168505478?text=Hola%20RLP.sas,%20me%20encuentro%20bajo%20investigaci%C3%B3n%20y%20requiero%20defensa%20t%C3%A9cnica%20de%20urgencia.";
 
 export const Hero = () => {
   return (
@@ -35,11 +36,11 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4">
-            <Button asChild className="gold-metallic-gradient text-black font-bold h-14 md:h-16 px-6 md:px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine text-[10px] md:text-sm">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Evaluar Mi Caso Ahora</a>
+            <Button asChild className="gold-metallic-gradient text-black font-black h-14 md:h-16 px-6 md:px-10 rounded-none border-none shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform animate-gold-shine text-base md:text-2xl">
+              <a href={WHATSAPP_EVALUAR_URL} target="_blank" rel="noopener noreferrer">Evaluar Mi Caso Ahora</a>
             </Button>
             <Button asChild variant="outline" className="h-14 md:h-16 px-6 md:px-10 rounded-none border-white/20 text-white hover:bg-white/5 font-bold uppercase tracking-widest text-[10px] md:text-xs">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href={WHATSAPP_INVESTIGACION_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Estoy Bajo Investigación <TrendingUp className="h-4 w-4" />
               </a>
             </Button>
