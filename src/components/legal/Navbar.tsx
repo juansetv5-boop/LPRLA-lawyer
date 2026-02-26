@@ -29,7 +29,7 @@ export const Navbar = () => {
           />
           <div className="flex flex-col gap-0.5 md:gap-1">
             <span className="font-headline text-lg md:text-2xl font-bold text-white tracking-widest uppercase leading-none">RLP.sas</span>
-            <span className="text-[7px] md:text-[9px] font-bold text-primary tracking-[0.4em] md:tracking-[0.5em] uppercase">Justicia de Autoridad</span>
+            <span className="text-[8px] md:text-[11px] font-bold text-primary tracking-[0.4em] md:tracking-[0.5em]">Oficina de Apoyo, Asesoramiento Jurídico y Compliance</span>
           </div>
         </Link>
 
