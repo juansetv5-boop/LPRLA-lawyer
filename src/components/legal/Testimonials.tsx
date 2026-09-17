@@ -10,6 +10,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 const testimonials = [
     {
@@ -64,67 +65,72 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="pt-12 pb-0 bg-black border-t border-primary/5">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
-                    <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Casos de Éxito</span>
-                    <h2 className="text-4xl md:text-6xl font-bold font-headline text-white leading-tight">
-                        Resultados que <br /><span className="gold-text-gradient italic">Respaldan la Estrategia</span>
-                    </h2>
-                </div>
+        <section className="py-20 md:py-28 bg-black border-t border-primary/5">
+            <div className="container">
+                <AnimatedSection animation="fade-in">
+                    <div className="text-center mb-20">
+                        <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Casos de Éxito</span>
+                        <h2 className="text-4xl md:text-6xl font-bold font-headline text-white leading-tight">
+                            Resultados que <br /><span className="gold-text-gradient italic">Respaldan la Estrategia</span>
+                        </h2>
+                    </div>
+                </AnimatedSection>
 
-                <div className="max-w-7xl mx-auto px-6 md:px-16 mb-24">
-                    <Carousel
-                        opts={{
-                            align: "start",
-                            loop: true,
-                        }}
-                        className="w-full"
-                    >
-                        <CarouselContent className="-ml-4 md:-ml-6">
-                            {testimonials.map((t, idx) => (
-                                <CarouselItem key={idx} className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3">
-                                    <div className="h-full">
-                                        <Card className="bg-secondary/20 border-primary/10 rounded-none h-full flex flex-col hover:border-primary/40 transition-all duration-500 overflow-hidden group">
-                                            <CardContent className="p-10 flex flex-col h-full bg-gradient-to-br from-white/[0.02] to-transparent">
-                                                <div className="mb-8">
-                                                    <QuoteIcon className="h-6 w-6 text-primary/30 group-hover:text-primary/60 transition-colors" />
-                                                </div>
+                <AnimatedSection animation="slide-in-up" delay={200}>
+                    <div className="w-full mb-12">
+                        <Carousel
+                            opts={{
+                                align: "start",
+                                loop: true,
+                            }}
+                            className="w-full"
+                        >
+                            <CarouselContent className="-ml-4 md:-ml-6">
+                                {testimonials.map((t, idx) => (
+                                    <CarouselItem key={idx} className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3">
+                                        <div className="h-full">
+                                            <Card className="bg-secondary/20 border-primary/10 rounded-none h-full flex flex-col hover:border-primary/40 transition-all duration-500 overflow-hidden group">
+                                                <CardContent className="p-10 flex flex-col h-full bg-gradient-to-br from-white/[0.02] to-transparent">
+                                                    <div className="mb-8">
+                                                        <QuoteIcon className="h-6 w-6 text-primary/30 group-hover:text-primary/60 transition-colors" />
+                                                    </div>
 
-                                                <div className="mb-6">
-                                                    <span className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] block border-b border-primary/20 pb-2 w-fit">
-                                                        {t.context}
-                                                    </span>
-                                                </div>
+                                                    <div className="mb-6">
+                                                        <span className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] block border-b border-primary/20 pb-2 w-fit">
+                                                            {t.context}
+                                                        </span>
+                                                    </div>
 
-                                                <div className="grow">
-                                                    <p className="text-slate-200 text-base md:text-[17px] font-light leading-relaxed mb-10">
-                                                        "{t.quote}"
-                                                    </p>
-                                                </div>
-
-                                                <div className="pt-8 border-t border-white/10 mt-auto">
-                                                    <p className="text-white font-bold uppercase tracking-[0.2em] text-[11px] mb-3">
-                                                        {t.author}
-                                                    </p>
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="h-[1px] w-6 bg-primary/40"></div>
-                                                        <p className="text-primary font-bold text-[9px] uppercase tracking-[0.15em] italic">
-                                                            {t.insight}
+                                                    <div className="grow">
+                                                        <p className="text-slate-200 text-base md:text-[17px] font-light leading-relaxed mb-10">
+                                                            "{t.quote}"
                                                         </p>
                                                     </div>
-                                                </div>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="hidden xl:flex -left-16 border-primary/20 text-primary hover:bg-primary/10 bg-transparent rounded-none h-12 w-12" />
-                        <CarouselNext className="hidden xl:flex -right-16 border-primary/20 text-primary hover:bg-primary/10 bg-transparent rounded-none h-12 w-12" />
-                    </Carousel>
-                </div>
+
+                                                    <div className="pt-8 border-t border-white/10 mt-auto">
+                                                        <p className="text-white font-bold uppercase tracking-[0.2em] text-[11px] mb-3">
+                                                            {t.author}
+                                                        </p>
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="h-[1px] w-6 bg-primary/40"></div>
+                                                            <p className="text-primary font-bold text-[9px] uppercase tracking-[0.15em] italic">
+                                                                {t.insight}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </CardContent>
+                                            </Card>
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious className="hidden xl:flex -left-12 border-primary/20 text-primary hover:bg-primary/10 bg-transparent rounded-none h-12 w-12" />
+                            <CarouselNext className="hidden xl:flex -right-12 border-primary/20 text-primary hover:bg-primary/10 bg-transparent rounded-none h-12 w-12" />
+                        </Carousel>
+                    </div>
+                </AnimatedSection>
             </div>
         </section>
     );
 };
+

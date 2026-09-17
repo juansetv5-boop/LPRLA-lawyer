@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Gavel, Landmark, ShieldAlert } from 'lucide-react';
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 const WHATSAPP_URL = "https://wa.me/573168505478?text=Hola%20RLP.sas,%20deseo%20consultar%20sobre%20una%20de%20sus%20especialidades%20de%20defensa%20penal%20y%20sancionatoria.";
 
@@ -25,32 +26,36 @@ const cards = [
 
 export const Services = () => {
   return (
-    <section className="pt-0 pb-0 bg-black" id="defensa">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-24">
-          <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Especialidades de Alto Riesgo</span>
-          <h2 className="text-3xl md:text-5xl font-bold font-headline text-white leading-tight">Defensa Penal: <br /><span className="gold-text-gradient">Cuando el Riesgo es Real</span></h2>
-        </div>
+    <section className="py-20 md:py-28 bg-black" id="defensa">
+      <div className="container">
+        <AnimatedSection animation="fade-in">
+          <div className="text-center mb-24">
+            <span className="text-primary font-bold uppercase tracking-[0.6em] text-[10px] mb-4 block">Especialidades de Alto Riesgo</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-headline text-white leading-tight">Defensa Penal: <br /><span className="gold-text-gradient">Cuando el Riesgo es Real</span></h2>
+          </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="group relative p-12 bg-secondary/30 border border-primary/10 hover:border-primary/40 transition-all duration-500 overflow-hidden block"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-5 transform group-hover:scale-110 transition-transform">
-                {React.cloneElement(card.icon as React.ReactElement<any>, { className: 'h-32 w-32' })}
+            <AnimatedSection key={idx} animation="slide-in-up" delay={idx * 150}>
+              <div
+                className="group relative p-12 bg-secondary/30 border border-primary/10 hover:border-primary/40 transition-all duration-500 overflow-hidden block h-full"
+              >
+                <div className="absolute top-0 right-0 p-8 opacity-5 transform group-hover:scale-110 transition-transform">
+                  {React.cloneElement(card.icon as React.ReactElement<any>, { className: 'h-32 w-32' })}
+                </div>
+                <div className="mb-8">{card.icon}</div>
+                <h3 className="text-2xl font-bold font-headline mb-4 text-white group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-slate-500 leading-relaxed font-light">{card.desc}</p>
+                <div className="mt-8 pt-8 border-t border-white/5 flex items-center gap-2 text-[10px] uppercase tracking-widest text-primary/60 font-bold group-hover:text-primary transition-colors">
+                  Estrategia Especializada <span>→</span>
+                </div>
               </div>
-              <div className="mb-8">{card.icon}</div>
-              <h3 className="text-2xl font-bold font-headline mb-4 text-white group-hover:text-primary transition-colors">{card.title}</h3>
-              <p className="text-slate-500 leading-relaxed font-light">{card.desc}</p>
-              <div className="mt-8 pt-8 border-t border-white/5 flex items-center gap-2 text-[10px] uppercase tracking-widest text-primary/60 font-bold group-hover:text-primary transition-colors">
-                Estrategia Especializada <span>→</span>
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
     </section>
   );
 };
+

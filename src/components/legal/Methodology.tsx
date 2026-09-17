@@ -1,7 +1,8 @@
 
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 const phases = [
   { id: "01", title: "Lectura Rápida del Riesgo", desc: "Identificación de vulnerabilidades en el primer contacto con el ente de control." },
@@ -12,37 +13,38 @@ const phases = [
 
 export const Methodology = () => {
   return (
-    <section className="pt-12 pb-0 bg-black overflow-hidden" id="metodologia">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div>
-            <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-4">El Tablero de Control</span>
-            <h2 className="text-3xl md:text-5xl font-bold font-headline mb-8 leading-tight">
-              La Defensa No Es Reacción. <br />
-              <span className="gold-text-gradient">Es Anticipación.</span>
-            </h2>
-            <p className="text-slate-400 font-light text-lg max-w-md">
-              Cada fase de nuestro método está diseñada para recuperar la iniciativa en el proceso legal.
-            </p>
-          </div>
+    <section className="py-20 md:py-28 bg-black overflow-hidden" id="metodologia">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-24">
+          <AnimatedSection animation="slide-in-left">
+            <div>
+              <span className="text-primary font-bold uppercase tracking-[0.5em] text-[10px] block mb-4">El Tablero de Control</span>
+              <h2 className="text-3xl md:text-5xl font-bold font-headline mb-8 leading-tight">
+                La Defensa No Es Reacción. <br />
+                <span className="gold-text-gradient">Es Anticipación.</span>
+              </h2>
+              <p className="text-slate-400 font-light text-lg max-w-md">
+                Cada fase de nuestro método está diseñada para recuperar la iniciativa en el proceso legal.
+              </p>
+            </div>
+          </AnimatedSection>
 
           <div className="space-y-12 relative">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-white/10"></div>
-            {phases.map((phase) => (
-              <div
-                key={phase.id}
-                className="phase-item relative pl-20"
-              >
-                <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center border border-primary bg-primary text-black">
-                  <span className="text-sm font-bold">{phase.id}</span>
+            {phases.map((phase, idx) => (
+              <AnimatedSection key={phase.id} animation="slide-in-right" delay={idx * 150}>
+                <div className="phase-item relative pl-20">
+                  <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center border border-primary bg-primary text-black">
+                    <span className="text-sm font-bold">{phase.id}</span>
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-primary">
+                    {phase.title}
+                  </h4>
+                  <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
+                    {phase.desc}
+                  </p>
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-primary">
-                  {phase.title}
-                </h4>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
-                  {phase.desc}
-                </p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -50,3 +52,4 @@ export const Methodology = () => {
     </section>
   );
 };
+

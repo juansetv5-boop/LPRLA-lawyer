@@ -59,7 +59,7 @@ export const Chatbot = () => {
               </div>
             ))}
             {isLoading && (
-              <div className="flex gap-4 animate-pulse">
+              <div className="flex gap-4 opacity-50">
                 <div className="h-10 w-10 bg-secondary"></div>
                 <div className="h-20 w-3/4 bg-secondary"></div>
               </div>

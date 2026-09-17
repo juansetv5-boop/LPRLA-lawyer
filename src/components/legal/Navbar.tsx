@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md min-h-20 border-b border-primary/20' : 'bg-transparent min-h-28'} flex items-center`}>
-      <div className="container mx-auto px-6 py-4 flex items-center justify-start gap-4 md:gap-8">
+      <div className="container py-4 flex items-center justify-between gap-4 md:gap-8">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
           <Image
             src="/logo-divider.png"

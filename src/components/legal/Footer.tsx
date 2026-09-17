@@ -8,7 +8,7 @@ import Link from 'next/link';
 export const Footer = () => {
   return (
     <footer className="bg-black border-t border-primary/10 pt-24 pb-12 overflow-hidden relative">
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-4 mb-8 hover:opacity-80 transition-opacity cursor-pointer">
