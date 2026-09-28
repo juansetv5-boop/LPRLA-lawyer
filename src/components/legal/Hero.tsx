@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ShieldAlert, TrendingUp } from 'lucide-react';
 import { AnimatedSection } from '@/components/ui/animated-section';
@@ -10,10 +11,16 @@ const WHATSAPP_INVESTIGACION_URL = "https://wa.me/573168505478?text=Hola%20RLP.s
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-32 pb-16 overflow-hidden bg-black">
+    <section aria-label="Sección principal - Abogados penalistas en Popayán" className="relative min-h-[90vh] flex items-center pt-32 pb-16 overflow-hidden bg-black">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 grayscale brightness-50"></div>
+        <Image
+          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80"
+          alt="RLP.sas Abogados en Popayán"
+          fill
+          priority
+          className="object-cover opacity-20 grayscale brightness-50"
+        />
         <div className="absolute inset-0 hero-overlay"></div>
         <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent"></div>
       </div>

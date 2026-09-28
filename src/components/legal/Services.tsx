@@ -26,7 +26,7 @@ const cards = [
 
 export const Services = () => {
   return (
-    <section className="py-20 md:py-28 bg-black" id="defensa">
+    <section aria-label="Servicios de defensa penal y sancionatoria" className="py-20 md:py-28 bg-black" id="defensa">
       <div className="container">
         <AnimatedSection animation="fade-in">
           <div className="text-center mb-24">
@@ -38,7 +38,7 @@ export const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
             <AnimatedSection key={idx} animation="slide-in-up" delay={idx * 150}>
-              <div
+              <article
                 className="group relative p-12 bg-secondary/30 border border-primary/10 hover:border-primary/40 transition-all duration-500 overflow-hidden block h-full"
               >
                 <div className="absolute top-0 right-0 p-8 opacity-5 transform group-hover:scale-110 transition-transform">
@@ -50,7 +50,7 @@ export const Services = () => {
                 <div className="mt-8 pt-8 border-t border-white/5 flex items-center gap-2 text-[10px] uppercase tracking-widest text-primary/60 font-bold group-hover:text-primary transition-colors">
                   Estrategia Especializada <span>→</span>
                 </div>
-              </div>
+              </article>
             </AnimatedSection>
           ))}
         </div>

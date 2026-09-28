@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="bg-black border-t border-primary/10 pt-24 pb-12 overflow-hidden relative">
+    <footer aria-label="Información de contacto RLP.sas Popayán" role="contentinfo" className="bg-black border-t border-primary/10 pt-24 pb-12 overflow-hidden relative">
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-2">
@@ -54,8 +54,8 @@ export const Footer = () => {
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.5em] text-slate-600 font-bold">
           <p>© {new Date().getFullYear()} Representación Legal Popayán. Todos los derechos reservados.</p>
           <div className="flex gap-10 mt-6 md:mt-0">
-            <a href="/aviso-legal" className="hover:text-primary transition-colors">Aviso Legal</a>
-            <a href="/privacidad" className="hover:text-primary transition-colors">Privacidad</a>
+            <Link href="/aviso-legal" className="hover:text-primary transition-colors">Aviso Legal</Link>
+            <Link href="/privacidad" className="hover:text-primary transition-colors">Privacidad</Link>
           </div>
         </div>
       </div>

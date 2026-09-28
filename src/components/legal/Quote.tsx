@@ -6,7 +6,7 @@ import { AnimatedSection } from '@/components/ui/animated-section';
 
 export const Quote = () => {
   return (
-    <section className="py-36 md:py-48 bg-black relative">
+    <aside role="complementary" aria-label="Cita del director Robinson Luna" className="py-36 md:py-48 bg-black relative">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] bg-fixed bg-center opacity-5 grayscale"></div>
       <div className="container text-center max-w-4xl relative z-10">
         <AnimatedSection animation="slide-in-up">
@@ -22,7 +22,7 @@ export const Quote = () => {
           </div>
         </AnimatedSection>
       </div>
-    </section>
+    </aside>
   );
 };
 

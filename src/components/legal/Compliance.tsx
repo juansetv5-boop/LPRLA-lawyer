@@ -6,7 +6,7 @@ import { AnimatedSection } from '@/components/ui/animated-section';
 
 export const Compliance = () => {
   return (
-    <section className="py-20 md:py-28 bg-black border-t border-primary/10" id="compliance">
+    <section aria-label="Compliance y defensa preventiva en Popayán" className="py-20 md:py-28 bg-black border-t border-primary/10" id="compliance">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
           <AnimatedSection animation="slide-in-left">

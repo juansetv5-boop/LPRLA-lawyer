@@ -65,7 +65,7 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="py-20 md:py-28 bg-black border-t border-primary/5">
+        <section aria-label="Casos de éxito y testimonios" className="py-20 md:py-28 bg-black border-t border-primary/5">
             <div className="container">
                 <AnimatedSection animation="fade-in">
                     <div className="text-center mb-20">

@@ -13,7 +13,7 @@ const phases = [
 
 export const Methodology = () => {
   return (
-    <section className="py-20 md:py-28 bg-black overflow-hidden" id="metodologia">
+    <section aria-label="Metodología de defensa legal" className="py-20 md:py-28 bg-black overflow-hidden" id="metodologia">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-24">
           <AnimatedSection animation="slide-in-left">
